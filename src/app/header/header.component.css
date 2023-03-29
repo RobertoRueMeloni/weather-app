@@ -1,0 +1,56 @@
+/* Navbar container */
+.navbar {
+  background-color: #007bff;
+  height: 100px;
+  padding: 0 20px;
+  border-radius: 0;
+}
+
+/* Logo */
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Links */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-nav li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.navbar-nav li a {
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Active link */
+.navbar-nav li.active a {
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 5px;
+}
+
+/* Hover state */
+.navbar-nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.navbar-nav:first-child {
+  padding-right: 50px;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+}

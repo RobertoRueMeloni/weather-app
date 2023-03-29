@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather-app';
+  loadedFeature = 'weathermap';
+  onNavigate(feature:string){
+    this.loadedFeature = feature;
+  }
 }

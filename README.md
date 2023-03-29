@@ -1,27 +1,26 @@
-# WeatherApp
+Create an app using the tech stack and features described below. The app should be a Windows desktop app built using Angular 2+ and Electron, and should use NgRx for state management. Please include logging, unit test cases and a ReadMe file. Once you are done with the mini project, please upload the code to your BitBucket/GitHub account and share the link, or send a zip file. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Tech Stack:
+	TypeScript
+	Angular 2+
+	Electron
+	@ngrx/store
+	Axios
+	SQLite
+	OAuth2
 
-## Development server
+Specifications:
+	Home screen displays a title bar with app name on the left, settings and login buttons on the right and window controls (min, max, close).
+	Body of home screen displays welcome message with some guidelines for user to login and select a city to see the weather for.
+	Settings screen shows settings (like weather API URL, API key, etc.) and allows user to update them. Settings should be stored in a SQLite database.
+	Login screen should allow users to log in using a Google account via the OAuth2 protocol. If you prefer, you could alternatively support log in via a Microsoft account. 
+	Upon successful login, check in SQLite database users table. If user is not found, add a record with basic details received from the Google ID token (first name, last name, email). 
+	Once logged in, home page displays input options (text boxes or a drop down) for user to provide location information and click a button to get weather info. 
+	Fetch the weather with the required details and display them in appropriate format. 
+	Provide a way for the user to log out. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Resources:
+	Weather API: Sign up for a free plan at https://weatherstack.com/product (feel free to use any other free api for weather as you see fit)
+	Google OAuth2: Sign up for a client ID (free): https://developers.google.com/identity/protocols/oauth2
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Please reach out if you have any questions or clarifications.
