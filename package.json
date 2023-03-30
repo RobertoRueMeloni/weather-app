@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --configuration=development",
     "test": "ng test",
     "electron": "electron .",
     "electron-build": "ng build --configuration=production"
@@ -25,7 +25,9 @@
     "angular-oauth2-oidc": "^15.0.1",
     "axios": "^1.3.4",
     "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
     "rxjs": "~7.8.0",
+    "sqlite3": "^5.1.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },

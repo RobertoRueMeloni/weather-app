@@ -1,1 +1,18 @@
-<p>setting works!</p>
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="weatherApiUrl">Weather API URL:</label>
+      <input type="text" id="weatherApiUrl" name="weatherApiUrl" [(ngModel)]="weatherApiUrl">
+    </div>
+    <div>
+      <label for="apiKey">API Key:</label>
+      <input type="text" id="apiKey" name="apiKey" [(ngModel)]="apiKey">
+    </div>
+    <div>
+      <label for="name">First and Last name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="name">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
