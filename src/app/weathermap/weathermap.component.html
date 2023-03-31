@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-xs-12">
     <img src="" alt="" class="img-responsive">
   </div>
@@ -18,5 +18,34 @@
       <button type="button" class="btn btn-primary dropdown-toggle">Check weather <span class="caret"></span></button>
     </div>
   </div>
+</div> -->
+
+<div class="row">
+  <div class="col-xs-12">
+    <img src="" alt="" class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{city}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="class-xs-12">
+    <div class="btn-group">
+      <input 
+        type="City" 
+        class="form-control" 
+        #serverContentInput
+        [(ngModel)]="city">
+      <button type="button" class="btn btn-primary dropdown-toggle" (click)="getApiKey()">Check weather <span class="caret"></span></button>
+    </div>
+  </div>
 </div>
 
+<div class="row" *ngIf="weatherData">
+  <div class="col-xs-12">
+    <p>Temperature: {{weatherData.temperature}} °C</p>
+    <p>Weather Description: {{weatherData.weather_descriptions[0]}}</p>
+  </div>
+</div>
