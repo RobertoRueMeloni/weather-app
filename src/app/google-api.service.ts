@@ -6,7 +6,8 @@ const oAuthconfig: AuthConfig = {
   strictDiscoveryDocumentValidation: false,
   // redirectUri: 'http://localhost:4200/dashboard',
   //clientId: '488364931693-j4obtalt2tbl5f8plcpic9jfi3trmhkr.apps.googleusercontent.com',
-  redirectUri: 'http://localhost:4200',
+  // redirectUri: 'http://localhost:4200',
+  redirectUri: 'myapp://callback',
   clientId:'488364931693-277uss9lma7d15e15c1rm3u4n7kt6cab.apps.googleusercontent.com',
   scope: 'openid profile email',
   responseType: 'code'
