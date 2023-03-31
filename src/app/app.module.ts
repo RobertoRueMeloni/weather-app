@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { FormsModule } from '@angular/forms';
+import { IntroductionComponent } from './introduction/introduction.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     WeathermapComponent,
     SettingComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule,

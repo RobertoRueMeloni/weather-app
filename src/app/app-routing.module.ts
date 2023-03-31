@@ -21,6 +21,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SettingComponent } from './setting/setting.component';
 import { WeathermapComponent } from './weathermap/weathermap.component';
+import { IntroductionComponent } from './introduction/introduction.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,12 @@ const routes: Routes = [
     component: SettingComponent,
     pathMatch: 'full',
     data: { title: 'Settings' }
+  },
+  {
+    path: '',
+    component: IntroductionComponent,
+    pathMatch: 'full',
+    data: { title: 'introduction'}
   }
 ];
 

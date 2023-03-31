@@ -4,12 +4,22 @@
     <div class="navbar-header">
       <a href="api" class="navbar-brand">Weather App</a>
     </div>
+    <div id="window-controls">
+      <button id="minimize">-</button>
+      <button id="maximize">+</button>
+      <button id="close">x</button>
+    </div>
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a [routerLink]="['dashboard']"> dashboard</a></li>
+        </ul>
+      </div>
+      <div id="setting">
+        <ul class="nav navbar-nav">
           <li><a [routerLink]="['setting']">setting</a></li>
           <li><a [routerLink]="['login']">Login</a></li>
-        </ul>
-    </div>
+    </ul>
+  </div>
+ <!-- <app-introduction> </app-introduction> -->
   </div>
 </nav>

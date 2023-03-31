@@ -1,7 +1,41 @@
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-header {
+  margin-right: auto;
+}
+
+#window-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  margin-left: auto;
+}
+
+#window-controls button {
+  margin-left: 10px;
+}
+
+#setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  margin-left: auto;
+}
+
+#setting button {
+  margin-left: 10px;
+}
 /* Navbar container */
 .navbar {
   background-color: #007bff;
-  height: 100px;
+  height: 150px;
   padding: 0 20px;
   border-radius: 0;
 }
