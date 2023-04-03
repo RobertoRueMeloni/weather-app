@@ -10,7 +10,7 @@ import axios from 'axios';
 })
 export class WeathermapComponent {
   city = '';
-  weatherData: any = {};
+  weatherData: string  = '';
 
   ngOnInit() {
     this.getApiKey();
@@ -33,8 +33,8 @@ export class WeathermapComponent {
     console.log('here is the url' + url)
     axios.get(url)
       .then(response => {
-        console.log(response)
-        this.weatherData = response.data.current;
+        console.log(response.data.main)
+        this.weatherData = response.data.main.temp;
       })
       .catch(error => {
         console.log(error);

@@ -68,7 +68,23 @@ function createWindow (){
   win.on('closed', function(){
     win = null
   })
+  ipcMain.on('minimize', () => {
+    win.minimize();
+  });
+
+  ipcMain.on('maximize', () => {
+    if (win.isMaximized()) {
+      win.restore();
+    } else {
+      win.maximize();
+    }
+  });
+
+  ipcMain.on('close', () => {
+    win.close();
+  });
 }
+
 
 //Create window on electron inizialization
 app.on('ready', createWindow)

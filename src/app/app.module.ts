@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { FormsModule } from '@angular/forms';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { userReducer } from './user.reducer';
 
 @NgModule({
   declarations: [
