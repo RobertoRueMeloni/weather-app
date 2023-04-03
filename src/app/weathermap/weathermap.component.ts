@@ -10,7 +10,7 @@ import axios from 'axios';
 })
 export class WeathermapComponent {
   city = '';
-  weatherData: any = {};
+  weatherData: string  = '';
 
   ngOnInit() {
     this.getApiKey();
@@ -29,27 +29,28 @@ export class WeathermapComponent {
 
   getWeather(apiKey: string, weatherApiUrl: string) {
     // const url = `${weatherApiUrl}?access_key=${apiKey}&query=${this.city}`;
-    // console.log(url)
-    // axios.get(url)
-    //   .then(response => {
-    //     console.log(response)
-    //     this.weatherData = response.data.current;
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   });
-
-    const params = {
-      access_key: '6418f2cb29c354057783a893ea3649b3',
-      query: 'New York'
-    }
-    
-    axios.get('https://api.weatherstack.com/current', {params})
+    const url = `${weatherApiUrl}?q=${this.city}&appid=${apiKey}`;
+    console.log('here is the url' + url)
+    axios.get(url)
       .then(response => {
-        const apiResponse = response.data;
-        console.log(`Current temperature in ${apiResponse.location.name} is ${apiResponse.current.temperature}℃`);
-      }).catch(error => {
+        console.log(response.data.main)
+        this.weatherData = response.data.main.temp;
+      })
+      .catch(error => {
         console.log(error);
       });
+
+  //   const params = {
+  //     access_key: '6418f2cb29c354057783a893ea3649b3',
+  //     query: 'New York'
+  //   }
+    
+  //   axios.get('https://api.openweathermap.org/data/2.5/weather?q=', {params})
+  //     .then(response => {
+  //       const apiResponse = response.data;
+  //       console.log(`Current temperature in ${apiResponse.location.name} is ${apiResponse.current.temperature}℃`);
+  //     }).catch(error => {
+  //       console.log(error);
+  //     });
   }
 }
