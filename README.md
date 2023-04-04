@@ -24,3 +24,13 @@ Resources:
 	Google OAuth2: Sign up for a client ID (free): https://developers.google.com/identity/protocols/oauth2
 
 Please reach out if you have any questions or clarifications.
+
+
+to run the app start with
+npm install to install all the dependencies
+
+open the server with node server.js from the server file
+
+ng serve from the app file 
+
+and finally npm run electron from the app file
